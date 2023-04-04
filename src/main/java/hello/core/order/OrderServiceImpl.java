@@ -22,4 +22,9 @@ public Order createOrder(Long memberId, String itemName, int itemPrice) {
     
     return new Order(memberId, itemName, itemPrice, discountPrice);
 }
+
+public MemberRepository getMemberRepository() {
+    return memberRepository;
+}
+
 }
