@@ -17,13 +17,11 @@ public void lifeCycleTest() {
 
 @Configuration
 static class LifeCycleConfig {
-    @Bean
+    @Bean(initMethod = "init", destroyMethod = "close")
     public NeworkClient networkClient() {
         NeworkClient neworkClient = new NeworkClient();
         neworkClient.setUrl("http://naver.com");
         return neworkClient;
     }
-    
 }
-
 }
