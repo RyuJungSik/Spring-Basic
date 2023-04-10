@@ -17,7 +17,7 @@ public void lifeCycleTest() {
 
 @Configuration
 static class LifeCycleConfig {
-    @Bean(initMethod = "init", destroyMethod = "close")
+    @Bean
     public NeworkClient networkClient() {
         NeworkClient neworkClient = new NeworkClient();
         neworkClient.setUrl("http://naver.com");
